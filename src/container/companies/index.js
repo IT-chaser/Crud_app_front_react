@@ -98,7 +98,7 @@ export default class Company extends Component {
         });
       };
 
-      onChangeEditCompanyHanler = (e) => {
+      onChangeEditCompanyHandler = (e) => {
         let { editCompanyData } = this.state;
         editCompanyData[e.target.name] = e.target.value;
         this.setState({ editCompanyData });
@@ -225,7 +225,7 @@ export default class Company extends Component {
            <EditCompany
             toggleEditCompanyModal={this.toggleEditCompanyModal}
             editCompanyModal={this.state.editCompanyModal}
-            onChangeEditCompanyHanler={this.onChangeEditCompanyHanler}
+            onChangeEditCompanyHandler={this.onChangeEditCompanyHandler}
             editCompany={this.editCompany}
             editCompanyData={editCompanyData}
             updateCompany={this.updateCompany}

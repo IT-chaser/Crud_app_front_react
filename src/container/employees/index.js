@@ -62,9 +62,9 @@ export default class Employee extends Component {
           newEmployeeModal: !this.state.newEmployeeModal,
         });
       };
-    onChangeAddEmployeeHandler = (e) => {
+    onChangeAddEmployeeHandler = (b) => {
         let { newEmployeeData } = this.state;
-        newEmployeeData[e.target.name] = e.target.value;
+        newEmployeeData[b.target.name] = b.target.value;
         this.setState({ newEmployeeData });
     };
     addEmployee = () => {
@@ -101,7 +101,7 @@ export default class Employee extends Component {
         });
       };
 
-      onChangeEditEmployeeHanler = (e) => {
+      onChangeEditEmployeeHandler = (e) => {
         let { editEmployeeData } = this.state;
         editEmployeeData[e.target.name] = e.target.value;
         this.setState({ editEmployeeData });
@@ -232,7 +232,7 @@ export default class Employee extends Component {
            <EditEmployee
                 toggleEditEmployeeModal={this.toggleEditEmployeeModal}
                 editEmployeeModal={this.state.editEmployeeModal}
-                onChangeEditEmployeeHanler={this.onChangeEditEmployeeHanler}
+                onChangeEditEmployeeHandler={this.onChangeEditEmployeeHandler}
                 editEmployee={this.editEmployee}
                 editEmployeeData={editEmployeeData}
                 updateEmployee={this.updateEmployee}
